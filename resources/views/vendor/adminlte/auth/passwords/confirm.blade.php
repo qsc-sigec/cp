@@ -2,7 +2,7 @@
 
 @section('adminlte_css')
     @yield('css')
-@stop
+@stop 
 
 @section('classes_body', 'lockscreen')
 
