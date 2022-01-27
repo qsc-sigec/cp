@@ -6,6 +6,8 @@ use App\Models\Cliente;
 use App\Models\Categoria;
 use App\Models\Registro;
 use App\Models\User;
+use App\Mail\CPIMailable;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\ActividadController;
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,11 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
+});
+Route::get('/ntf', function () {
+    $correo = new CPIMAilable;
+    Mail::to('webqsc@gmail.com')->send($correo);
+    return "Mensaje enviado";
 });
 Route::get('/actividades/{id}/{act_cli_id}/{act_cat_id}/edit', [ActividadController::class,'edit']);
 Route::get('/dashboard', [ActividadController::class,'board']);
