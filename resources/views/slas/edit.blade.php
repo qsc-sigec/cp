@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'SLAs')
 
 @section('content_header')
 
@@ -75,7 +75,7 @@
         </div>
     </div>
     <a href="/slas" class="btn btn-secondary" tabindex="6">Cancelar</a>
-    <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
+    <button type="submit" class="btn btn-primary" tabindex="7">Guardar</button>
 </form>
 @stop
 

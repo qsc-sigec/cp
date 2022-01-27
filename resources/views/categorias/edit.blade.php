@@ -1,7 +1,12 @@
-@extends('layouts.base')
+@extends('adminlte::page')
 
-@section('contenido')
-<h2>EDITAR CATEGORIAS</h2>
+@section('title', 'Categorias')
+
+@section('content_header')
+
+@stop
+
+@section('content')
 <form action="/categorias/{{$categoria->id}}" method="POST">
 @csrf
 @method('PUT')
@@ -16,4 +21,23 @@
     <a href="/categorias" class="btn btn-secondary" tabindex="3">Cancelar</a>
     <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 </form>
-@endsection
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+@stop
+
+@section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('#actividades').DataTable({
+            "lengthMenu":[[10,15,50,-1],[10,15,50,"All"]]
+        });
+    } );
+    </script>
+@stop

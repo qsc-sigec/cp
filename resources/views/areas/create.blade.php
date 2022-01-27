@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Áreas')
+@section('title', 'Areas')
 
 @section('content_header')
 
@@ -11,7 +11,7 @@
 <form action="/areas" method="POST">
 @csrf
     <div class="mb-3">
-        <label for="" class="form-label">Área</label>
+        <label for="" class="form-label">Nombre del área</label>
         <input type="text" id="are_nombre" name="are_nombre" class="form-control" tabindex="1">
     </div>
     <a href="/areas" class="btn btn-secondary" tabindex="2">Cancelar</a>

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'slas')
+@section('title', 'SLAs')
 
 @section('content_header')
 
@@ -42,11 +42,11 @@
         </div>
         <div class="col mb-3">
             <label for="" class="form-label">Tiempo (horas)</label>
-            <input type="number" id="sla_tiempo" name="sla_tiempo" class="form-control" tabindex="4" required>
+            <input type="number" id="sla_tiempo" name="sla_tiempo" class="form-control" tabindex="5" required>
         </div>
     </div>
-    <a href="/slas" class="btn btn-secondary" tabindex="3">Cancelar</a>
-    <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
+    <a href="/slas" class="btn btn-secondary" tabindex="6">Cancelar</a>
+    <button type="submit" class="btn btn-primary" tabindex="7">Guardar</button>
 </form>
 @stop
 

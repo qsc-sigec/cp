@@ -1,14 +1,38 @@
-@extends('layouts.base')
+@extends('adminlte::page')
 
-@section('contenido')
-<h2>CREAR CLIENTES</h2>
+@section('title', 'Clientes')
+
+@section('content_header')
+
+@stop
+
+@section('content')
 <form action="/clientes" method="POST">
 @csrf
     <div class="mb-3">
-        <label for="" class="form-label">CLIENTE</label>
+        <label for="" class="form-label">Nombre del cliente</label>
         <input type="text" id="cli_nombre" name="cli_nombre" class="form-control" tabindex="1">
     </div>
     <a href="/clientes" class="btn btn-secondary" tabindex="2">Cancelar</a>
     <button type="submit" class="btn btn-primary" tabindex="3">Guardar</button>
 </form>
-@endsection
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+@stop
+
+@section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('#actividades').DataTable({
+            "lengthMenu":[[10,15,50,-1],[10,15,50,"All"]]
+        });
+    } );
+    </script>
+@stop

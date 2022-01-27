@@ -38,7 +38,7 @@
         </div>
         <div class="col">
             <label for="" class="form-label">Responsable</label>
-            <select name="reg_usr_id" id="reg_usr_id" class="form-control" tabindex="7" required>
+            <select name="reg_usr_id" id="reg_usr_id" class="form-control" tabindex="5" required>
             @foreach ($users as $user)
             <option value="{{$user->id}}">{{$user->name}}</option>
             @endforeach
@@ -54,7 +54,7 @@
     <div class="row">
         <div class="col">
             <label for="" class="form-label">Prioridad</label>
-            <select name="reg_prioridad" id="reg_prioridad" class="form-control" tabindex="8" required>
+            <select name="reg_prioridad" id="reg_prioridad" class="form-control" tabindex="6" required>
                 <option value="1">Alta</option>
                 <option value="2">Media</option>
                 <option value="3">Baja</option>
@@ -62,28 +62,27 @@
         </div>
         <div class="col">
             <label for="" class="form-label">Complejidad</label>
-            <select name="reg_complejidad" id="reg_complejidad" class="form-control" tabindex="9" required>
+            <select name="reg_complejidad" id="reg_complejidad" class="form-control" tabindex="7" required>
                 <option value="1">Alta</option>
                 <option value="2">Media</option>
                 <option value="3">Baja</option>
             </select>          
         </div>
         <div class="col">
-            <label for="" class="form-label">Estimado en horas</label>
-            <input type="number" id="reg_estimado" name="reg_estimado" class="form-control" tabindex="10" required>
-            <label id="msj">El tiempo se calculará de acuerdo a los SLA's</label>
+            <label for="" class="form-label" id="label">Estimado en horas</label>
+            <input type="number" id="reg_estimado" name="reg_estimado" class="form-control" tabindex="8" required>
         </div>
         <div class="col">
             <label for="" class="form-label">Fecha Propuesta de Finalización</label>
             <?php $fechaActual = date('Y-m-d'); ?>
-            <input type="date" id="reg_fechaPropuesta" name="reg_fechaPropuesta" class="form-control" tabindex="11" value="<?php echo $fechaActual; ?>" required>
+            <input type="date" id="reg_fechaPropuesta" name="reg_fechaPropuesta" class="form-control" tabindex="9" value="<?php echo $fechaActual; ?>" required>
         </div>
     </div>
     <div class="mb-3">
         <input type="text" id="reg_revision" name="reg_revision" class="form-control" value="" hidden>
     </div>        
-    <a href="/actividades" class="btn btn-secondary" tabindex="12">Cancelar</a>
-    <button type="submit" class="btn btn-primary" tabindex="13">Crear Servicio</button>
+    <a href="/actividades" class="btn btn-secondary" tabindex="10">Cancelar</a>
+    <button type="submit" class="btn btn-primary" tabindex="11">Crear Servicio</button>
 </form>
 
 @stop

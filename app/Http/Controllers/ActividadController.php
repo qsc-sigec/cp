@@ -44,6 +44,7 @@ class ActividadController extends Controller
     }
     public function board()
     {
+
         $open=Actividad::where('act_responsable','=',auth()->user()->id)
         ->where('act_status', '=', 'Open')->count();
         $pending=Actividad::where('act_responsable','=',auth()->user()->id)

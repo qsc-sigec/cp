@@ -12,7 +12,7 @@
 @csrf
 @method('PUT')
     <div class="mb-3">
-        <label for="" class="form-label">areas</label>
+        <label for="" class="form-label">Nombre del área</label>
         <input type="text" id="are_nombre" name="are_nombre" class="form-control" value="{{$area->are_nombre}}" tabindex="1">
     </div>
     <a href="/areas" class="btn btn-secondary" tabindex="2">Cancelar</a>
